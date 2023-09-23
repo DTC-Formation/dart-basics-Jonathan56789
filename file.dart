@@ -1,7 +1,9 @@
 import 'dart:ffi';
-import 'dart:io';
+import 'dart:io' ; 
+import 'Personne.dart' ; 
 
-int som(int a , int b ){
+
+import 'Personne.dart';int som(int a , int b ){
     return a+b ; 
 } 
 
@@ -69,6 +71,8 @@ void main(){
 
  
   print("Je suis une "+cons_voy('e')) ; 
+
+  Personne Jonathan = new Personne() ; 
 
 }
 
