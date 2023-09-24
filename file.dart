@@ -1,9 +1,11 @@
 import 'dart:ffi';
 import 'dart:io' ; 
-import 'Personne.dart' ; 
 
 
-import 'Personne.dart';int som(int a , int b ){
+
+import 'Personne.dart';
+import 'adrresse.dart';
+int som(int a , int b ){
     return a+b ; 
 } 
 
@@ -57,22 +59,37 @@ void main(){
   // for (var i = 0; i < 12; i++) {
   //   print(i) ; 
   // }
-  print("Somme : ") ;
-  // int test = som(12,15) ; 
-  int fact_input = 5 ; 
-  int factorielle = fact(fact_input) ; 
-  // print(test) ; 
-  print("Le factorielle de") ; 
-  print(factorielle) ; 
+  // print("Somme : ") ;
+  // // int test = som(12,15) ; 
+  // int fact_input = 5 ; 
+  // int factorielle = fact(fact_input) ; 
+  // // print(test) ; 
+  // print("Le factorielle de") ; 
+  // print(factorielle) ; 
 
-  print("puissance : ") ; 
-  print(puiss(2, 3)) ; 
+  // print("puissance : ") ; 
+  // print(puiss(2, 3)) ; 
 
 
  
-  print("Je suis une "+cons_voy('e')) ; 
+  // print("Je suis une "+cons_voy('e')) ; 
 
-  Personne Jonathan = new Personne() ; 
+  addresse adr_jo = addresse("IBK 40 Ter Ampasamadinika", "Tana") ; 
+  Personne Jonathan = Personne("Rakotozafy", "Jonathan", 20 , "Masculin", adr_jo) ; 
+
+ addresse adr_ennemy = addresse("Analamahitsy" , "Tana") ; 
+  Personne ennemy = Personne("Rakotozafy", "Harijesy", 21, "Feminin", adr_ennemy) ; 
+
+  print("Jonathan :") ; 
+  Jonathan.saluer(ennemy) ; 
+
+  print("ennemy :") ; 
+  ennemy.saluer(Jonathan) ; 
+
+  print("JOnathan : aiza akie nareo no mipetraka?") ;
+  Jonathan.demande_addr(ennemy) ; 
+  
+
 
 }
 
