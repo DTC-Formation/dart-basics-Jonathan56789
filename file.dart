@@ -3,8 +3,8 @@ import 'dart:io' ;
 
 
 
-import 'Personne.dart';
-import 'adrresse.dart';
+import 'Player.dart';
+
 int som(int a , int b ){
     return a+b ; 
 } 
@@ -55,41 +55,20 @@ String cons_voy(String lettre){
  
 }
 void main(){
-  // print("Hello") ; 
-  // for (var i = 0; i < 12; i++) {
-  //   print(i) ; 
-  // }
-  // print("Somme : ") ;
-  // // int test = som(12,15) ; 
-  // int fact_input = 5 ; 
-  // int factorielle = fact(fact_input) ; 
-  // // print(test) ; 
-  // print("Le factorielle de") ; 
-  // print(factorielle) ; 
 
-  // print("puissance : ") ; 
-  // print(puiss(2, 3)) ; 
+  Player thor = new Player("Thor", 9, 50) ; 
+  Player superman = new Player("Superman", 17, 50) ; 
+  Player iron_man = new Player("Iron-man", 12, 50) ; 
+  Player hulk = new Player("Hulk" , 15 , 50) ;
 
+  hulk.attaquer(superman) ; 
+  superman.attaquer(hulk) ; 
+  thor.attaquer(hulk) ;
+  iron_man.attaquer(hulk) ; 
+  hulk.attaquer(iron_man) ; 
 
- 
-  // print("Je suis une "+cons_voy('e')) ; 
+  superman.attaquer(hulk) ;  
 
-  addresse adr_jo = addresse("IBK 40 Ter Ampasamadinika", "Tana") ; 
-  Personne Jonathan = Personne("Rakotozafy", "Jonathan", 20 , "Masculin", adr_jo) ; 
-
- addresse adr_ennemy = addresse("Analamahitsy" , "Tana") ; 
-  Personne ennemy = Personne("Rakotozafy", "Harijesy", 21, "Feminin", adr_ennemy) ; 
-
-  print("Jonathan :") ; 
-  Jonathan.saluer(ennemy) ; 
-
-  print("ennemy :") ; 
-  ennemy.saluer(Jonathan) ; 
-
-  print("JOnathan : aiza akie nareo no mipetraka?") ;
-  Jonathan.demande_addr(ennemy) ; 
   
-
-
 }
 
